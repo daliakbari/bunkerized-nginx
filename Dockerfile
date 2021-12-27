@@ -19,7 +19,7 @@ VOLUME /www /http-confs /server-confs /modsec-confs /modsec-crs-confs /cache /pr
 
 EXPOSE 8080/tcp 8443/tcp
 
-USER nginx:nginx
+USER 1000770000:1000770000
 
 HEALTHCHECK --interval=30s --timeout=10s --start-period=120s --retries=3 CMD [ -f /tmp/nginx.pid ] || [ -f /tmp/nginx-temp.pid ] || exit 1
 
